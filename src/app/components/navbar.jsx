@@ -57,7 +57,7 @@ export default function Navbar() {
                     <path
                       stroke="currentColor"
                       strokeLinecap="round"
-                      strokelinejoin="round"
+                      strokeLinejoin="round"
                       strokeWidth="2"
                       d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                     />
@@ -91,17 +91,17 @@ export default function Navbar() {
                 </svg>
               </button>
             )}
-            <button
-              type="button"
+            <Link
+              href="/login"
               className="text-stone-800 border-2 border-stone-800 hover:bg-orange-50 hover:text-stone-950 font-semibold rounded-3xl text-sm sm:px-5 px-2.5 py-2.5 text-center md:block md:w-auto hidden w-0"
             >
               Loging/Signup
-            </button>
+            </Link>
             <button
               type="button"
               className="text-center text-stone-800 hover:bg-orange-50 rounded-3xl hover:text-stone-950 p-3 block md:hidden md:w-0"
             >
-              <span className="sr-only">account</span>
+              <span className="sr-only">Account</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -132,7 +132,7 @@ export default function Navbar() {
               >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg>
-              <span className="sr-only">cart</span>
+              <span className="sr-only">Cart</span>
               <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-semibold text-white bg-red-500  rounded-full -top-2 -right-2">
                 {cartItem}
               </div>
@@ -143,7 +143,7 @@ export default function Navbar() {
               type="button"
               className="text-center text-stone-800 hover:bg-orange-50 rounded-3xl hover:text-stone-950 p-3 dropbtn"
             >
-              <span className="sr-only">more</span>
+              <span className="sr-only">More</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -155,28 +155,28 @@ export default function Navbar() {
                 <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
               </svg>
             </button>
-            <div className="absolute z-10 bg-white shadow-xl rounded-lg py-2 border-t-4 border-slate-300 top-10 right-0 flex flex-col dropcontent hidden">
-              <button
-                type="button"
+            <div className="absolute z-10 bg-white shadow-xl rounded-lg py-2 border-t-4 border-slate-300 top-10 right-0 flex flex-col dropcontent hidden w-36">
+              <Link
+              href='/order'
                 className="text-stone-800 border-b-2 border-slate-400 hover:bg-orange-50 hover:text-stone-950 font-semibold text-sm px-4 py-1.5"
               >
-                orders
-              </button>
-              <button
-                type="button"
+                My Orders
+              </Link>
+              <Link
+                href="/account"
                 className="text-stone-800 border-b-2 border-slate-400 hover:bg-orange-50 hover:text-stone-950 font-semibold text-sm px-4 py-1.5"
               >
                 Accounts
-              </button>
-              <button
-                type="button"
+              </Link>
+              <Link
+                href="/support"
                 className="text-stone-800 border-b-2 border-slate-400 hover:bg-orange-50 hover:text-stone-950 font-semibold text-sm px-4 py-1.5"
               >
-                Settings
-              </button>
+                Customer Care
+              </Link>
               <button
                 type="button"
-                className="text-stone-800 border-b-2 border-slate-400 hover:bg-orange-50 hover:text-stone-950 font-semibold text-sm px-4 py-1.5"
+                className="text-stone-800 border-b-2 border-slate-400 hover:bg-orange-50 hover:text-stone-950 font-semibold text-sm px-4 py-1.5 text-start"
               >
                 Logout
               </button>

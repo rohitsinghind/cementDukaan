@@ -115,6 +115,15 @@ setPriceDetails({
 })
 }
 
+// console.log(isCod)
+
+const handleOrder = async () => {
+  try {
+    navig
+  } catch (error) {
+    console.log(error)
+  }
+}
 useEffect(() => {
 calculatePrice()
 }, [])
@@ -126,7 +135,7 @@ calculatePrice()
     <EditAddressDialog open={editAddressDialog} setOpen={setEditAddressDialog}/>
     <AddAddressDialog open={addAddressDialog} setOpen={setAddAddressDialog}/>
       <div className="max-w-screen-xl sm:px-4 px-2 py-6 mx-auto my-4 rounded">
-        <div className="w-full px-4 py-6">
+        <div className="w-full sm:px-4 py-6">
           <div>
             
             <h2 className={activeTab === 1 ? activeClass : inActiveClass}>
@@ -272,10 +281,10 @@ calculatePrice()
               </button>
             </h2>
             <div class={activeTab === 2 ? "block" : "hidden"}>
-              <div class="p-5 border border-b-0 border-gray-200 bg-white mb-4">
+              <div class="lg:p-5 p-1 border border-b-0 border-gray-200 bg-white mb-4">
                 {/* //div */}
                 <div className="flex justify-between mb-6 lg:gap-8 gap-4 lg:flex-row flex-col w-full">
-          <div className="w-2/3">
+          <div className="lg:w-2/3">
             <div className="bg-white border border-gray-200 rounded-lg w-full px-4 py-6">
               {products?.map((product) => {
                 const [qty, setQty] = useState(1);
@@ -283,14 +292,14 @@ calculatePrice()
                   <>
                     <div className="border-b border-gray-200 pb-6 mb-4">
                         <Link href={`product/${product?.productId}`}>
-                      <div className="flex gap-12 items-center cursor-pointer">
+                      <div className="flex sm:gap-12 gap-8 items-center cursor-pointer">
                         <img
-                          className="rounded w-28"
+                          className="rounded sm:w-28 w-20"
                           src={product?.thumbnailImg}
                           alt=""
                         />
                         <div>
-                          <h5 className="sm:text-xl text-lg font-semibold tracking-tight text-stone-800">
+                          <h5 className="sm:text-xl text-base font-semibold tracking-tight text-stone-800">
                           {product?.title}
                           </h5>
                           <div className="flex items-center mb-2.5 mt-1.5">
@@ -357,14 +366,14 @@ calculatePrice()
                         </div>
                       </div>
                       </Link>
-                      <div className="flex gap-10 mt-2.5">
-                        <div className="flex gap-1">
+                      <div className="flex sm:gap-10 gap-6 mt-2.5">
+                        <div className="flex gap-1 items-center">
                           <button
                             disabled={qty < 2}
                             onClick={() => {
                               setQty(qty - 1);
                             }}
-                            className={`p-1 border rounded-3xl hover:bg-gray-100 ${
+                            className={`sm:p-1 border rounded-3xl hover:bg-gray-100 ${
                               qty < 2
                                 ? "text-gray-400 border-gray-400"
                                 : "border-gray-600"
@@ -385,13 +394,13 @@ calculatePrice()
                             type="number"
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
-                            className="w-12 bg-gray-200 p-1 text-center rounded-lg"
+                            className="sm:w-12 w-8 bg-gray-200 p-1 text-center rounded-lg"
                           />
                           <button
                             onClick={() => {
                               setQty(qty + 1);
                             }}
-                            className="p-1 border border-gray-600 rounded-3xl hover:bg-gray-100"
+                            className="sm:p-1 border border-gray-600 rounded-3xl hover:bg-gray-100"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +414,7 @@ calculatePrice()
                             </svg>
                           </button>
                         </div>
-                        <p className="font-semibold text-base text-gray-700">
+                        <p className="font-semibold sm:text-base text-sm text-gray-700">
                           Delivery by wed Nov 22 
                         </p>
                       </div>
@@ -415,14 +424,14 @@ calculatePrice()
               })}
               <div className="flex justify-end">
               <Link href="/checkout">
-                <button onClick={() => setActiveTab(3)} className="bg-orange-600 text-white py-4 px-16 rounded font-semibold hover:bg-orange-500">
+                <button onClick={() => setActiveTab(3)} className="lg:block hidden bg-orange-600 text-white mb-6 py-2 px-4 sm:w-48 h-10 ml-8  rounded text-sm font-semibold hover:bg-orange-500">
                  CONTINUE
                 </button>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="w-1/3">
+          <div className="lg:w-1/3">
             <div className="bg-white border border-gray-200 rounded-lg px-4 py-6">
               <div className="text-lg font-semibold text-gray-500 border-b border-gray-200 p-2">
                 PRICE DETAILS
@@ -457,6 +466,13 @@ calculatePrice()
                 Safe and Secure Payments. Easy returns. 100% Authentic products.
               </span>
             </div>
+            <div className="flex justify-end">
+              <Link href="/checkout">
+                <button onClick={() => setActiveTab(3)} className="lg:hidden bg-orange-600 text-white py-2 px-4 sm:w-48 h-10 mt-6 mr-4 rounded text-sm font-semibold hover:bg-orange-500">
+                 CONTINUE
+                </button>
+                </Link>
+              </div>
           </div>
         </div>
 
@@ -484,25 +500,30 @@ calculatePrice()
                         <input
                           id="default-radio-1"
                           type="radio"
-                          checked={isCod}
-                          value={isCod}
-                          onChange={(e) =>
-                            setisCod(e.target.checked)
-                          }
+                          checked
+                          // value={true}
+                          // onChange={(e) =>
+                          //   setisCod(e.target.checked)
+                          // }
                           name="default-radio"
                           class="w-4 h-4 mt-1 text-blue-600 bg-gray-100 border-gray-300"
                         />
+                         <div class="ms-2 text-sm ml-4">
                         <label
                           for="default-radio-1"
-                          class="ml-4 font-medium flex justify-between w-full"
-                        > Cash on Delivery
+                          class=" font-medium flex justify-between w-full"
+                        > Pay on Delivery
                           </label>
+                          <p id="helper-radio-text" class="text-xs font-normal text-gray-500">Cash & UPI accepted</p>
+                          </div>
                       </div>
-                      <div class="flex w-full">
+                      <div class="flex w-full mt-2">
                         <input
                           id="default-radio-2"
                           type="radio"
-                          value={!isCod}
+                          value={false}
+                          disabled
+                          checked={!isCod}
                           onChange={(e) =>
                             setisCod(!(e.target.checked))
                           }

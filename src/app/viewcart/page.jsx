@@ -79,7 +79,7 @@ export default function ViewCart() {
     <>
       <div className="max-w-screen-xl sm:px-4 px-2 py-6 mx-auto my-4 rounded">
         <div className="flex justify-between mb-6 lg:gap-8 gap-4 lg:flex-row flex-col w-full">
-          <div className="w-2/3">
+          <div className="lg:w-2/3">
             <div className="bg-white border border-gray-200 rounded-lg w-full px-4 py-6">
               {products?.map((product) => {
                 const [qty, setQty] = useState(1);
@@ -226,7 +226,7 @@ export default function ViewCart() {
               </div>
             </div>
           </div>
-          <div className="w-1/3">
+          <div className="lg:w-1/3">
             <div className="bg-white border border-gray-200 rounded-lg px-4 py-6">
               <div className="text-lg font-semibold text-gray-500 border-b border-gray-200 p-2">
                 PRICE DETAILS

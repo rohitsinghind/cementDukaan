@@ -8,15 +8,15 @@ export default function HomeCarousal() {
     <>
      <Carousel className='mb-10' showArrows={true} showThumbs={false} showStatus={false} autoPlay infiniteLoop>
                 <div>
-                    <img src="https://cultivatedculture.com/wp-content/uploads/2019/05/Chromatic-LinkedIn-Cover-Photo-Background.png" />
+                    <img src="https://resumekraft.com/wp-content/uploads/2021/08/art-linkedin-background-photo-1024x256.jpg" />
                     {/* <p className="legend">Legend 1</p> */}
                 </div>
                 <div>
-                    <img src="https://cultivatedculture.com/wp-content/uploads/2019/05/Chromatic-LinkedIn-Cover-Photo-Background.png" />
+                    <img src="https://resumekraft.com/wp-content/uploads/2021/08/art-linkedin-background-photo-1024x256.jpg" />
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
-                    <img src="https://cultivatedculture.com/wp-content/uploads/2019/05/Chromatic-LinkedIn-Cover-Photo-Background.png" />
+                    <img src="https://resumekraft.com/wp-content/uploads/2021/08/art-linkedin-background-photo-1024x256.jpg" />
                     {/* <p className="legend">Legend 3</p> */}
                 </div>
     </Carousel>
