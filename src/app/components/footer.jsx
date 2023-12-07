@@ -51,13 +51,13 @@ export default function Footer() {
                   <h2 className="mb-6 text-xs font-semibold text-gray-300 uppercase ">CONSUMER POLICY</h2>
                   <ul className="text-gray-300 text-xs">
                       <li className="mb-4">
-                          <Link href="#" className="hover:underline hover:text-gray-200">Privacy Policy</Link>
+                          <Link href="/privacy-policy" className="hover:underline hover:text-gray-200">Privacy Policy</Link>
                       </li>
                       <li className="mb-4">
-                          <Link href="#" className="hover:underline hover:text-gray-200">Terms &amp; Conditions</Link>
+                          <Link href="/terms" className="hover:underline hover:text-gray-200">Terms &amp; Conditions</Link>
                       </li>
                       <li>
-                          <Link href="#" className="hover:underline hover:text-gray-200">Cancellation &amp; Return</Link>
+                          <Link href="/cancellation-and-return" className="hover:underline hover:text-gray-200">Cancellation &amp; Return</Link>
                       </li>
                   </ul>
               </div>
